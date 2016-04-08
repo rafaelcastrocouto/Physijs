@@ -971,6 +971,7 @@ public_functions.hinge_enableAngularMotor = function( params ) {
 	}
 };
 public_functions.hinge_disableMotor = function( params ) {
+	var constraint = _constraints[ params.constraint ];
 	_constraints[ params.constraint ].enableMotor( false );
 	if ( constraint.getRigidBodyB() ) {
 		constraint.getRigidBodyB().activate();
